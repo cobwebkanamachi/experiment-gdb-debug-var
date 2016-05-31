@@ -79,6 +79,6 @@ http://www.delorie.com/gnu/docs/gdb/gdb_56.html<BR>
 8.5 Examining memory<BR>
 http://stackoverflow.com/questions/3305164/how-to-modify-memory-contents-using-gdb<BR>
 How to modify memory contents using GDB?<BR>
-http://inaz2.hatenablog.com/entry/2014/07/27/205913
-(gdb) i proc
-(gdb) shell cat /proc/5927/maps
+http://inaz2.hatenablog.com/entry/2014/07/27/205913<BR>
+(gdb) i proc<BR>
+(gdb) shell cat /proc/5927/maps<BR>
