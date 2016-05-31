@@ -65,6 +65,9 @@ if you type bellow, variable would change.<BR>
 this would check with bellow.<BR>
 (gdb)  x /32b 0x602030<BR>
 0x602030:   0x21 0x00 0x00...<BR>
+(gdb) p x[8] = 0xff<BR>
+(gdb)  x /32b 0x602030<BR>
+0x602030:   0xff 0x00 0x00...<BR>
 <BR>
 8. Consideration<BR>
 (1) you could use valgrind with perf record -e mem: if you get address of watch variable on gdb.<BR>
