@@ -73,8 +73,12 @@ this would check with bellow.<BR>
 (1) you could use valgrind with perf record -e mem: if you get address of watch variable on gdb.<BR>
 (2) if you print &x[8] you see specific address, but that is static or not ?<BR>
     i got 0x602030 in my env.<BR>
+(3) if you have detect heap address, read last ref. wrote in japanese(pls use public translate service)<BR>
 9. refs.<BR>
 http://www.delorie.com/gnu/docs/gdb/gdb_56.html<BR>
 8.5 Examining memory<BR>
 http://stackoverflow.com/questions/3305164/how-to-modify-memory-contents-using-gdb<BR>
 How to modify memory contents using GDB?<BR>
+http://inaz2.hatenablog.com/entry/2014/07/27/205913
+(gdb) i proc
+(gdb) shell cat /proc/5927/maps
