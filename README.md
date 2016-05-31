@@ -59,7 +59,14 @@ f () at d.c:6
 (gdb) 
 </pre>
 <BR>
-7. Consideration<BR>
+7. change and dump variables(this is danger)<BR>
+if you type bellow, variable would change.<BR>
+(gdb) p x[8] = 33<BR>
+this would check with bellow.<BR>
+(gdb)  x /32b 0x602030<BR>
+0x602030:   0x21 0x00 0x00...<BR>
+<BR>
+8. Consideration<BR>
 (1) you could use valgrind with perf record -e mem: if you get address of watch variable on gdb.<BR>
 (2) if you print &x[8] you see specific address, but that is static or not ?<BR>
     i got 0x602030 in my env.<BR>
