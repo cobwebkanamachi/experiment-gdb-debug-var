@@ -2,19 +2,25 @@
 this is an experiment for combinience to use gdb debug for stdc.<BR>
 <BR>
 1. gcc compile time<BR>
-  gcc -g d.c -o d.exec<BR>
-  if you prefer, add -O0 <BR>
+   gcc -g d.c -o d.exec<BR>
+   if you prefer, add -O0 <BR>
+<BR>
 2. invoke gdb<BR>
-  gdb d.exec<BR>
+   gdb d.exec<BR>
+<BR>
 3. add break point<BR>
   break f<BR>
   run<BR>
+<BR>
 4. add watch variable<BR>
-  watch x[8]<BR>
+   watch x[8]<BR>
+<BR>
 5. go next line<BR>
-  please type n or next<BR>
+   please type n or next<BR>
+<BR>
 6. gdb print out<BR>
-shown bellow.<BR>
+   shown bellow.<BR>
+<BR>
 $ gdb d.exec<BR>
 <pre>
 GNU gdb (Ubuntu 7.7.1-0ubuntu5~14.04.2) 7.7.1
@@ -52,3 +58,8 @@ f () at d.c:6
 6            x[8] = 0;        // problem 1: heap block overrun
 (gdb) 
 </pre>
+<BR>
+7. Consideration<BR>
+(1) you could use valgrind with perf record -e mem: if you get address of watch variable on gdb.<BR>
+(2) if you print &x[8] you see specific address, but that is static or not ?<BR>
+    i got 0x602030 in my env.<BR>
